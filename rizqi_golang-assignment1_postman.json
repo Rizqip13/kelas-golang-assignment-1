@@ -1,0 +1,161 @@
+{
+    "info": {
+        "_postman_id": "072ceccf-a7cb-4530-b3e0-116fdd769610",
+        "name": "golang-assignment1",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "getOrders",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:8080/orders/",
+                    "path": [
+                        "orders"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "createOrder",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost:8080/orders/",
+                    "path": [
+                        "orders"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n    \"orderedAt\":\"2023-10-25T14:33:20+00:00\",\n    \"customerName\":\"Putra\",\n     \"items\":[\n        {\n            \"name\": \"iPhone\",\n            \"description\":\"iPhone 11 Pro\",\n            \"quantity\":2\n        },\n        {\n            \"name\": \"iPad\",\n            \"description\":\"iPad air 3\",\n            \"quantity\":1\n        }\n    ]\n}"
+                }
+            }
+        },
+        {
+            "name": "getOrderByID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:8080/orders/1",
+                    "path": [
+                        "orders",
+                        "1"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "updateOrderByID",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "localhost:8080/orders/2",
+                    "path": [
+                        "orders",
+                        "2"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"customerName\": \"Putri\",\n  \"orderedAt\": \"2023-12-24T12:04:22Z\",\n  \"items\": [\n    {\n      \"name\": \"iPhone\",\n      \"description\": \"iPhone 14 Pro\",\n      \"quantity\": 351\n    }\n  ]\n}"
+                }
+            }
+        },
+        {
+            "name": "deleteOrderByID",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "localhost:8080/orders/2",
+                    "path": [
+                        "orders",
+                        "2"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "createOrder2",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost:8080/orders/",
+                    "path": [
+                        "orders"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n    \"orderedAt\":\"2023-10-24T12:04:22+00:00\",\n    \"customerName\":\"Putri\",\n     \"items\":[\n        {\n            \"name\": \"iPhone\",\n            \"description\":\"iPhone 13 Pro\",\n            \"quantity\":2\n        }\n    ]\n}"
+                }
+            }
+        },
+        {
+            "name": "updateOrder",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "localhost:8080/orders/",
+                    "path": [
+                        "orders"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"ID\": 1,\n  \"customerName\": \"Putra Editt\",\n  \"orderedAt\": \"2023-10-25T14:33:20Z\",\n  \"items\": [\n    {\n      \"id\": 1,\n      \"name\": \"iPhone\",\n      \"description\": \"iPhone 14 Pro\",\n      \"quantity\": 2,\n      \"OrderID\": 1\n    },\n    {\n      \"name\": \"macbook\",\n      \"description\": \"macbook pro\",\n      \"quantity\": 10\n    }\n  ]\n}"
+                }
+            }
+        }
+    ]
+}
